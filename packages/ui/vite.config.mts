@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import path from 'path'
 import {viteStaticCopy} from 'vite-plugin-static-copy'
+import cssInjected from 'vite-plugin-css-injected-by-js'
 
 import fs from 'fs'
 
@@ -61,6 +62,7 @@ export default defineConfig({
                 },
             ],
         }),
+        cssInjected(),
     ],
     build: {
         lib: {
